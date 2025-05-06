@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import "./AboutTemplate.scss";
 
 export interface AboutTemplateProps {
   pageContext: {
@@ -15,8 +16,11 @@ const AboutTemplate: React.FC<AboutTemplateProps> = ({ pageContext }) => {
 
   return (
     <Layout pageTitle={title}>
-      <div>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="about-content">
+        <div
+          className="about-html"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </div>
     </Layout>
   );

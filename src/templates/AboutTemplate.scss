@@ -1,0 +1,162 @@
+// src/templates/AboutTemplate.scss
+
+/* 기본 레이아웃 */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  line-height: 1.6;
+}
+
+/* 섹션 타이틀 */
+.about-html h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+/* 회사명/직책 */
+.about-html h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #444;
+  margin-top: 2.5rem;
+  margin-bottom: 0.7rem;
+}
+
+/* 프로젝트명 */
+.about-html h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #555;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+/* 일반 텍스트 */
+.about-html p {
+  color: #333;
+  margin: 0.7rem 0;
+  font-size: 1rem;
+}
+
+/* 리스트 */
+.about-html ul {
+  padding-left: 1.2rem;
+  margin: 1rem 0;
+}
+
+.about-html li {
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+
+.about-html li::marker {
+  color: #6c63ff;
+}
+
+/* 테이블 */
+.about-html table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+  font-size: 1rem;
+}
+
+.about-html th,
+.about-html td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.about-html th {
+  font-weight: 600;
+  color: #555;
+  width: 22%;
+  vertical-align: top;
+}
+
+/* 코드/인라인 코드 */
+.about-html code {
+  background: #f7f7f9;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #6c63ff;
+}
+
+/* 구분선 */
+.about-html hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
+}
+
+/* 강조 */
+.about-html strong,
+.about-html b {
+  font-weight: 600;
+  color: #000;
+}
+
+/* 날짜 표시 */
+.about-date {
+  text-align: right;
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* 링크 */
+.about-html a {
+  color: #6c63ff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.about-html a:hover {
+  border-color: #6c63ff;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 1.5rem;
+  }
+
+  .about-html h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-html h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-html table,
+  .about-html th,
+  .about-html td {
+    display: block;
+  }
+
+  .about-html th {
+    width: 100%;
+    padding-bottom: 0.2rem;
+  }
+
+  .about-html td {
+    padding-top: 0.2rem;
+    padding-left: 0;
+    border-top: none;
+  }
+}

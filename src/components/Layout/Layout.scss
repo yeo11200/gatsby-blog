@@ -1,66 +1,112 @@
 body {
   margin: 0;
   font-family: Pretendard, sans-serif;
-  background: #f7f7f7;
+  background: #f5f5f7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  color: #333;
+  line-height: 1.6;
 }
 
 .site-header {
-  width: 100vw;
-  background: #353a45;
-  color: #fff;
-  padding: 1.2rem 0;
-  text-align: center;
+  width: 100%;
+  background: #fff;
+  color: #333;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 32px;
+  margin-right: 0.5rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
 }
 
 .site-header nav a {
-  color: #6c63ff;
-  text-decoration: underline;
+  color: #444;
+  text-decoration: none;
   font-weight: 600;
-  margin: 0 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.05rem;
+  position: relative;
+  padding: 0.3em 0.2em;
+  transition: color 0.2s;
+}
+
+.site-header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #6c63ff;
+  transition: width 0.3s;
 }
 
 .site-header nav a:hover {
-  color: #fff;
-  background: #6c63ff;
-  border-radius: 0.3em;
-  padding: 0.1em 0.4em;
-  text-decoration: none;
+  color: #6c63ff;
+}
+
+.site-header nav a:hover::after {
+  width: 100%;
 }
 
 .layout-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  background: linear-gradient(to bottom, #fff 0%, #f5f5f7 100%);
 }
 
 .layout {
   flex: 1 0 auto;
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
-  padding: 2rem;
+  padding: 2.5rem 3rem;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.03);
   margin: 0 auto;
-  margin-top: 100px; /* 헤더 높이만큼 아래로 */
-  border-radius: 1.2rem;
+  margin-top: 90px;
+  border-radius: 0.6rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  animation: fadeIn 0.4s ease-out;
 }
 
 main {
   width: 100%;
-  min-height: 300px;
+  min-height: 500px;
   box-sizing: border-box;
 }
 
@@ -68,69 +114,306 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  padding: 2rem 0;
+  gap: 3rem;
+  padding: 2rem 1rem 4rem 1rem;
+  text-align: center;
 }
 
 .home-content h2 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
   font-weight: 700;
+  color: #222;
+  position: relative;
+  display: inline-block;
+}
+
+.home-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background: #f0f0f0;
+  border-radius: 2px;
 }
 
 .home-content p {
-  font-size: 1.2rem;
-  color: #222;
+  font-size: 1.25rem;
+  color: #555;
   text-align: center;
   margin: 0;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+.intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 1rem 0 2rem 0;
+  width: 100%;
+}
+
+.intro-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.intro-card:hover {
+  transform: translateY(-5px);
+}
+
+.intro-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.intro-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
 }
 
 .tech-stack {
   font-size: 1rem;
   color: #555;
   text-align: center;
+  margin: 1.5rem 0 2.5rem 0;
+  width: 100%;
 }
+
+.tech-stack span {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #444;
+  font-size: 1.2rem;
+}
+
 .tech-stack ul {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
   list-style: none;
   padding: 0;
-  margin: 0.5rem 0 0 0;
+  margin: 1rem 0 0 0;
 }
+
 .tech-stack li {
-  background: #f3f3f3;
-  border-radius: 1rem;
-  padding: 0.3rem 1rem;
-  font-size: 1rem;
+  background: #f7f7f9;
+  border-radius: 2rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.95rem;
+  color: #444;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.tech-stack li:hover {
+  background: #fff;
+  border-color: #6c63ff;
+  color: #6c63ff;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(108, 99, 255, 0.1);
+}
+
+.projects-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0 3rem 0;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.project-img {
+  width: 100%;
+  height: 160px;
+  background: #f5f5f7;
+  overflow: hidden;
+}
+
+.project-content {
+  padding: 1.2rem;
+}
+
+.project-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.project-content p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
 }
 
 .about-link {
-  margin-top: 1rem;
+  margin-top: 2rem;
   color: #6c63ff;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid #6c63ff;
-  transition: color 0.2s;
-}
-.about-link:hover {
-  color: #4834d4;
-  border-bottom: 2px solid #4834d4;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  border: 1px solid #6c63ff;
+  transition: all 0.2s;
+  font-size: 1.1rem;
 }
 
-.signature {
-  margin-top: 2rem;
-  font-size: 0.95rem;
-  color: #aaa;
-  letter-spacing: 0.05em;
+.about-link:hover {
+  background: #6c63ff;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
 }
 
 footer {
   flex-shrink: 0;
   width: 100%;
   text-align: center;
-  padding: 2.5rem 0 2rem 0; /* 더 아래로 내리고 싶으면 padding-bottom을 늘리세요 */
-  color: #888;
-  background: none;
-  font-size: 1rem;
-  margin-top: auto; /* 핵심! */
+  padding: 3rem 0;
+  color: #777;
+  background: #fafafa;
+  font-size: 0.95rem;
+  margin-top: auto;
+  letter-spacing: 0.02em;
+  border-top: 1px solid #eee;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  color: #777;
+  transition: color 0.2s;
+  font-size: 1.2rem;
+}
+
+.social-link:hover {
+  color: #6c63ff;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.footer-nav a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: #6c63ff;
+}
+
+.copyright {
+  color: #999;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .layout {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    padding: 2rem 1.5rem;
+    margin-top: 80px;
+    max-width: 95%;
+  }
+
+  .header-container {
+    padding: 0 1.2rem;
+  }
+
+  .site-header nav a {
+    font-size: 0.95rem;
+  }
+
+  .home-content h2 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1.1rem;
+  }
+
+  .projects-section {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-card {
+    max-width: 100%;
+  }
+
+  .tech-stack ul {
+    gap: 0.6rem;
+  }
+
+  .tech-stack li {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
 }
