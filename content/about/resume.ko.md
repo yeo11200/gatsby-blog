@@ -356,11 +356,24 @@ lang: ko
 - **Backend**: PHP, CodeIgniter, Node.js (Express, Socket.io)
 - **Infra & Tooling**: Git, Chart.js, Summernote
 
+---
+
 ## Skills
 
-- TypeScript, JavaScript, Vue 3, React, Next.js, Vike
-- Rollup, Webpack, Turborepo, Tailwind CSS
-- Docker, GitHub Actions, AWS (S3, CloudFront, Lambda@Edge)
+- TypeScript, JavaScript, Vue 3, React, Next.js
+- Rollup, Webpack, Turborepo, Tailwind CSS, Module scss
+- Docker, Monorepo, AWS (S3, CloudFront, Lambda@Edge, Amplify), Vercel
+- 리더쉽, 팀문화, 개발문화
+
+---
+
+## Community
+
+- **자스웹개발자컴컴 Node.js 커뮤니티 리더 (2024.03 ~ 진행 중)**
+  - Node.js, 프론트엔드, 백엔드 개발자들이 모인 기술 커뮤니티 운영 (~170명 규모)
+  - 실무 이슈, 개발 트렌드, 라이브러리 선택, 아키텍처 구성 등 다양한 주제로 논의 리딩
+  - 커뮤니티 내 공유 자료 아카이빙 및 피드백 중심 구조 설계
+  - 기술적 고민을 안전하게 공유하고 성장하는 문화 구축에 기여
 
 ---
 

@@ -11,11 +11,11 @@ export interface AboutTemplateProps {
 }
 
 // 이력서 템플릿 컴포넌트
-const AboutTemplate: React.FC<AboutTemplateProps> = ({ pageContext }) => {
-  const { html, title, date } = pageContext;
+const AboutTemplate = ({ pageContext }: AboutTemplateProps) => {
+  const { html } = pageContext;
 
   return (
-    <Layout pageTitle={title}>
+    <Layout>
       <div className="about-content">
         <div
           className="about-html"

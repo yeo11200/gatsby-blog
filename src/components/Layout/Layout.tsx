@@ -4,11 +4,10 @@ import Logo from "../../images/js-profile.png";
 import "./Layout.scss";
 
 export interface LayoutProps {
-  pageTitle: string;
   children: React.ReactNode;
 }
 
-const Layout = ({ pageTitle, children }: LayoutProps) => (
+const Layout = ({ children }: LayoutProps) => (
   <>
     <header className="site-header">
       <div className="header-container">

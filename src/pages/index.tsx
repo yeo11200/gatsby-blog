@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 const techStack = ["React", "TypeScript", "Gatsby", "Sass"];
 
 const Home: React.FC = () => (
-  <Layout pageTitle="JinSeop's Portfolio">
+  <Layout>
     <div className="home-content">
       <h2>안녕하세요! 👋</h2>
       <p>
