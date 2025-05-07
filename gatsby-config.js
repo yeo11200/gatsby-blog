@@ -1,3 +1,5 @@
+const metaConfig = require("./gatsby-meta-config");
+
 module.exports = {
   siteMetadata: {
     title: `My Portfolio`,
@@ -37,6 +39,18 @@ module.exports = {
         sassOptions: {
           includePaths: [`${__dirname}/src/styles`],
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: metaConfig.title,
+        short_name: metaConfig.title,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: `minimal-ui`,
+        icon: metaConfig.icon,
       },
     },
     // 5) 추가 Webpack 설정을 위해 플러그인 없음(아래 gatsby-node.js 참조)
