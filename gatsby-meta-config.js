@@ -35,8 +35,4 @@ module.exports = {
     countOfInitialPost: 10,
   },
   sponsor: {},
-  share: {},
-  revueId: "",
-  ga: "",
-  sentryDsn: "",
 };
