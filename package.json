@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "engines": { "node": "22.x" }
   "scripts": {
     "develop": "pnpm clean && gatsby develop",
     "build": "gatsby build",
