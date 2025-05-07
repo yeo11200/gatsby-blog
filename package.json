@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "engines": { "node": "22.x" },
+  "packageManager": "pnpm@10.5.2",
   "scripts": {
     "develop": "pnpm clean && gatsby develop",
     "build": "gatsby build",
