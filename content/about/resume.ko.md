@@ -8,6 +8,12 @@ lang: ko
 
 **Front-End Engineer** · 만 6년차 · INTJ/ISTJ
 
+### Skills
+- TypeScript, JavaScript, Vue 3, React, Next.js
+- Rollup, Webpack, Turborepo, Tailwind CSS, Module scss
+- Docker, Monorepo, AWS (S3, CloudFront, Lambda@Edge, Amplify), Vercel
+- 리더쉽, 팀문화, 개발문화
+- 
 ---
 
 ## 저는 \_\_\_\_\_ 엔지니어입니다
@@ -355,15 +361,6 @@ lang: ko
 - **Frontend**: AngularJS (1.x), JavaScript, jQuery
 - **Backend**: PHP, CodeIgniter, Node.js (Express, Socket.io)
 - **Infra & Tooling**: Git, Chart.js, Summernote
-
----
-
-## Skills
-
-- TypeScript, JavaScript, Vue 3, React, Next.js
-- Rollup, Webpack, Turborepo, Tailwind CSS, Module scss
-- Docker, Monorepo, AWS (S3, CloudFront, Lambda@Edge, Amplify), Vercel
-- 리더쉽, 팀문화, 개발문화
 
 ---
 
