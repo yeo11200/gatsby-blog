@@ -13,7 +13,7 @@ lang: ko
 - Rollup, Webpack, Turborepo, Tailwind CSS, Module scss
 - Docker, Monorepo, AWS (S3, CloudFront, Lambda@Edge, Amplify), Vercel
 - 리더쉽, 팀문화, 개발문화
-- 
+
 ---
 
 ## 저는 \_\_\_\_\_ 엔지니어입니다
