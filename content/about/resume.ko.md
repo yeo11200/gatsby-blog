@@ -6,7 +6,7 @@ lang: ko
 
 # 진섭 신 (JinSeop Shin)
 
-**Front-End Engineer** · 4년차 · INTJ/ISTJ
+**Front-End Engineer** · 만 6년차 · INTJ/ISTJ
 
 ---
 
