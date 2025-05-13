@@ -82,6 +82,40 @@ lang: ko
   </tbody>
 </table>
 
+### 🧩 React → Web Component 변환 및 Vue 통합 리팩토링
+
+#### 🔄 프로젝트 개요
+기존 Vue 기반 프로젝트에 React로 개발된 신규 UI를 도입하기 위해, React 컴포넌트를 Web Component 형태로 래핑하여 Vue 내에 자연스럽게 통합함. 이를 통해 리팩토링을 병렬로 수행하며 유지보수성과 확장성을 동시에 확보.
+
+#### 🔧 기술 전략
+
+- **React 컴포넌트를 Web Component로 변환**
+  - `react-dom` + `customElements.define()` 조합으로 마운팅
+  - Props/Attributes 양방향 데이터 바인딩 구현
+  - 이벤트 디스패치(`CustomEvent`)를 통해 Vue와 통신
+
+- **Vue에서 Web Component를 직접 사용**
+  - Vue 템플릿에서 `<custom-react-button>` 형태로 사용
+  - 기존 Vuex/Pinia 상태관리와 자연스럽게 연동되도록 설계
+
+- **점진적 리팩토링**
+  - Web Component로 먼저 이식 → 이후 완전한 React 컴포넌트 마이그레이션
+  - Style encapsulation을 유지하면서 공통 CSS 충돌 방지
+
+#### 🏗 사내 UI 라이브러리 개발
+
+- Web Component로 전환된 React UI 컴포넌트를 공통 패키지로 분리
+- 내부 전용 npm registry (ex: Verdaccio)로 패키징 및 배포 자동화
+- 컴포넌트마다 문서화 + 테스트 코드 포함 (`Storybook`, `Jest`)
+
+> ✅ 결과: 새로운 프로젝트에서는 해당 UI 컴포넌트를 공통으로 불러 사용 가능
+
+#### 🧠 MFE (Micro Frontend) 사고 기반 설계
+
+- 시스템 전체를 단일 SPA가 아닌 **독립된 모듈 단위**로 분리하는 구조 도입
+- `Web Component`는 MFE 기법에서 각 팀이 기술 스택을 자유롭게 선택할 수 있도록 하는 핵심 요소로 활용됨
+- React + Web Component + Vue 통합이 MFE 전략을 **기술적으로 실현한 첫 사례**
+
 ### 신규 사업 런칭 – 수시채용 플랫폼
 
 - React로 보일러플레이트 기반 플랫폼 개발 주도
