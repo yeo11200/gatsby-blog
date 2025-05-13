@@ -119,16 +119,17 @@ lang: ko
 - 어드민 하드코딩 영역 컴포넌트 화
 - 앱 캐싱으로 인한 배포시 css 깨지는 현상 수정 -> hash값으로 js, css 파일명으로 수정
 - nextjs web shared page 생성
-
+- 앱 관련 유지보수
+  - webview aos 스크롤 늘어나는 현상
+  - health connect, health kit 연동
+ 
 ### 팀문화/프로세스 정비
 
 - 업무 프로세스 정립 및 문서화
 - 온보딩 매뉴얼 및 코드 리뷰 가이드 작성
 - 브랜치 전략 및 커밋 플로우 정리
 - 면접 질문 템플릿 및 채용 프로세스 개선
-- 앱 관련 유지보수
-  - webview aos 스크롤 늘어나는 현상
-  - health connect, health kit 연동
+
 
 ### 보유기술
 
