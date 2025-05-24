@@ -376,7 +376,8 @@ footer {
   .layout {
     padding: 2rem 1.5rem;
     margin-top: 80px;
-    max-width: 95%;
+    max-width: 100%; // 95% → 100%로!
+    box-sizing: border-box;
   }
 
   .header-container {

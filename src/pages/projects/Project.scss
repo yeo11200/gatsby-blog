@@ -1,0 +1,82 @@
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+  transition: box-shadow 0.2s;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 24px rgba(108, 99, 255, 0.1);
+}
+
+.project-card h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.project-period {
+  color: #888;
+  font-size: 0.98rem;
+  margin-bottom: 1rem;
+}
+
+.project-card ul {
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+.project-actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  padding: 0.9em 2.2em;
+  border: none;
+  border-radius: 1em;
+  background: #6c63ff;
+  color: #fff;
+  font-size: 1.15rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(108, 99, 255, 0.08);
+  transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+  line-height: 1.2;
+  min-height: 48px;
+  text-align: center;
+}
+
+.btn:focus,
+.btn:hover {
+  background: #4834d4;
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.15);
+  transform: translateY(-2px) scale(1.03);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn svg {
+  font-size: 1.1em;
+  margin-right: 0.2em;
+}
