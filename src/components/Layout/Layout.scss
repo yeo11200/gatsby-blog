@@ -81,6 +81,69 @@ body {
   width: 100%;
 }
 
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 101;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  transition: background-color 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  transition: transform 0.3s;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+/* Active hamburger icon */
+.hamburger.active {
+  background-color: transparent;
+}
+
+.hamburger.active::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Menu overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+
 .layout-page {
   min-height: 100vh;
   display: flex;
@@ -373,6 +436,45 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /* Show hamburger menu and hide regular nav */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    gap: 0;
+    padding: 80px 0 0 0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 100;
+  }
+
+  .site-nav.open {
+    right: 0;
+  }
+
+  .site-header nav a {
+    display: block;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .site-header nav a::after {
+    display: none;
+  }
+
+  .menu-overlay {
+    display: block;
+  }
+
   .layout {
     padding: 2rem 1.5rem;
     margin-top: 80px;
@@ -382,10 +484,6 @@ footer {
 
   .header-container {
     padding: 0 1.2rem;
-  }
-
-  .site-header nav a {
-    font-size: 0.95rem;
   }
 
   .home-content h2 {
@@ -416,5 +514,17 @@ footer {
   .tech-stack li {
     padding: 0.4rem 1rem;
     font-size: 0.9rem;
+  }
+}
+
+/* Additional mobile styles */
+@media (max-width: 480px) {
+  .logo span {
+    font-size: 1.2rem;
+  }
+  
+  .site-nav {
+    width: 50%;
+    right: -80%;
   }
 }
