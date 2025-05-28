@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import PackageCard from '../../components/PackageCard';
 import { ToastProvider } from '../../components/Toast';
-import './Tools.scss';
+import './tools.scss';
 import useTools from '../../hooks/useTools';
 
   const ToolsPage = () => {

@@ -1,84 +1,84 @@
 @mixin flexbox($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: $direction;
-  flex-direction: $direction;
-  -webkit-box-pack: $justify;
-  -ms-flex-pack: $justify;
-  justify-content: $justify;
-  -webkit-box-align: $align;
-  -ms-flex-align: $align;
-  align-items: $align;
-  -ms-flex-wrap: $wrap;
-  flex-wrap: $wrap;
-}
-
-.tools-page {
-  padding: 40px 20px;
-  max-width: 1080px;
-  margin: 0 auto;
-
-  &__title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 24px;
-    color: #333;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+    -webkit-box-pack: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
+    -ms-flex-wrap: $wrap;
+    flex-wrap: $wrap;
   }
-
-  &__description {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 40px;
-    max-width: 800px;
-  }
-
-  &__grid {
-    @include flexbox(row, flex-start, flex-start, wrap);
-    margin: -15px;
-  }
-
-  &__grid-item {
-    padding: 15px;
-    box-sizing: border-box;
-    width: 100%; 
-    
-    @media (min-width: 640px) {
-      width: 50%;
-    }
-    
-    @media (min-width: 960px) {
-      width: 50%;
-    }
-    
-    @media (min-width: 1280px) {
-      width: 50%;
-    }
-  }
-}
-
-/* Media queries for responsive design */
-@media screen and (max-width: 480px) {
+  
   .tools-page {
-    padding: 24px 16px;
-    
+    padding: 40px 20px;
+    max-width: 1080px;
+    margin: 0 auto;
+  
     &__title {
-      font-size: 28px;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: #333;
     }
-    
+  
     &__description {
-      font-size: 14px;
-      margin-bottom: 32px;
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 40px;
+      max-width: 800px;
     }
-    
+  
     &__grid {
-      margin: -8px;
+      @include flexbox(row, flex-start, flex-start, wrap);
+      margin: -15px;
     }
-    
+  
     &__grid-item {
-      padding: 8px;
+      padding: 15px;
+      box-sizing: border-box;
+      width: 100%; 
+      
+      @media (min-width: 640px) {
+        width: 50%;
+      }
+      
+      @media (min-width: 960px) {
+        width: 50%;
+      }
+      
+      @media (min-width: 1280px) {
+        width: 50%;
+      }
     }
   }
-} 
+  
+  /* Media queries for responsive design */
+  @media screen and (max-width: 480px) {
+    .tools-page {
+      padding: 24px 16px;
+      
+      &__title {
+        font-size: 28px;
+      }
+      
+      &__description {
+        font-size: 14px;
+        margin-bottom: 32px;
+      }
+      
+      &__grid {
+        margin: -8px;
+      }
+      
+      &__grid-item {
+        padding: 8px;
+      }
+    }
+  } 
