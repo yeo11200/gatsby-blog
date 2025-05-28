@@ -1,13 +1,13 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import Layout from '../../components/Layout';
 import PackageCard from '../../components/PackageCard';
 import { ToastProvider } from '../../components/Toast';
 import './tools.scss';
 import useTools from './useTools';
 
-const ToolsPage = () => {
-  const { toolsData } = useTools();
+  const ToolsPage = () => {
+    const { toolsData } = useTools();
+
   return (
     <Layout>
       <ToastProvider>
@@ -32,15 +32,3 @@ const ToolsPage = () => {
 };
 
 export default ToolsPage;
-
-// Optional: If using MDX or other data sourcing in Gatsby
-export const query = graphql`
-  query ToolsPageQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    # Add any other data queries you need here
-  }
-`;
