@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import PresidentialDetail from "../../../components/modal-type/presidential-detail";
+import PresidentialDetail from "../../components/modal-type/presidential-detail";
 
 const useProjects = () => {
 

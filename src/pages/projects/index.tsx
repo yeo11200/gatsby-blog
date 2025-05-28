@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../components/Layout";
 import "./Project.scss";
 import Modal from "../../components/modal";
-import useProjects from "./useProjects";
+import useProjects from "../../hooks/useProjects";
 
 const Projects = () => {
   const { openModal, modalContent, handleOpenModal, projects } = useProjects();
