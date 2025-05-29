@@ -9,6 +9,7 @@ lang: ko
 **Front-End Engineer** · 만 6년차 · INTJ/ISTJ
 
 ### Skills
+
 - TypeScript, JavaScript, Vue 3, React, Next.js
 - Rollup, Webpack, Turborepo, Tailwind CSS, Module scss
 - Docker, Monorepo, AWS (S3, CloudFront, Lambda@Edge, Amplify), Vercel
@@ -28,7 +29,7 @@ lang: ko
 
 ### 🤝 사람 중심
 
-채용, 협업, 피드백을 통해 ‘사람이 일하는 방식’에도 깊은 관심을 갖는 엔지니어입니다.
+채용, 협업, 피드백을 통해 '사람이 일하는 방식'에도 깊은 관심을 갖는 엔지니어입니다.
 
 ## 저는 \_\_\_\_\_ 조직을 선호합니다
 
@@ -85,16 +86,19 @@ lang: ko
 ### 🧩 React → Web Component 변환 및 Vue 통합 리팩토링
 
 #### 🔄 프로젝트 개요
+
 기존 Vue 기반 프로젝트에 React로 개발된 신규 UI를 도입하기 위해, React 컴포넌트를 Web Component 형태로 래핑하여 Vue 내에 자연스럽게 통합함. 이를 통해 리팩토링을 병렬로 수행하며 유지보수성과 확장성을 동시에 확보.
 
 #### 🔧 기술 전략
 
 - **React 컴포넌트를 Web Component로 변환**
+
   - `react-dom` + `customElements.define()` 조합으로 마운팅
   - Props/Attributes 양방향 데이터 바인딩 구현
   - 이벤트 디스패치(`CustomEvent`)를 통해 Vue와 통신
 
 - **Vue에서 Web Component를 직접 사용**
+
   - Vue 템플릿에서 `<custom-react-button>` 형태로 사용
   - 기존 Vuex/Pinia 상태관리와 자연스럽게 연동되도록 설계
 
@@ -149,6 +153,7 @@ lang: ko
 - Figma 기반 협업, 개발자-디자이너 간 문서 정리 및 리뷰 프로세스 관리
 
 ### 운영업무
+
 - 어드민 권한 설정 작업
 - 어드민 하드코딩 영역 컴포넌트 화
 - 앱 캐싱으로 인한 배포시 css 깨지는 현상 수정 -> hash값으로 js, css 파일명으로 수정
@@ -156,14 +161,34 @@ lang: ko
 - 앱 관련 유지보수
   - webview aos 스크롤 늘어나는 현상
   - health connect, health kit 연동
- 
+
+### API Mocking 시스템 구축 (Express + MSW)
+
+#### 🔄 프로젝트 개요
+
+기존 API 서버와의 호환성 문제로 인해 MSW 도입이 어려운 상황에서, Express 서버와 프록시 미들웨어를 활용한 하이브리드 Mocking 시스템을 설계 및 구현. 이를 통해 개발 환경에서 안정적인 API 테스트가 가능하도록 구성.
+
+#### 🔧 기술 전략
+
+- **Express 서버 + 프록시 미들웨어 구성**
+
+  - 실제 API 서버로 요청 전달 및 응답 처리
+  - 404 응답 감지 시 자동으로 Mock 데이터로 폴백
+  - MSW를 통한 브라우저 환경 Mocking 지원
+
+- **유연한 Mocking 구조 설계**
+  - 실제 API 응답 우선, 실패 시 Mock 데이터 자동 주입
+  - 협의 주문 수 등 실제 API 응답을 안전하게 제공
+  - 외부 API 장애 상황에서도 개발/테스트 가능한 환경 구성
+
+> ✅ 결과: 개발 환경에서 안정적인 API 테스트 환경 구축 및 외부 API 의존성 최소화
+
 ### 팀문화/프로세스 정비
 
 - 업무 프로세스 정립 및 문서화
 - 온보딩 매뉴얼 및 코드 리뷰 가이드 작성
 - 브랜치 전략 및 커밋 플로우 정리
 - 면접 질문 템플릿 및 채용 프로세스 개선
-
 
 ### 보유기술
 
