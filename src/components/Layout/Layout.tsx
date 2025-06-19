@@ -23,16 +23,16 @@ const Layout = ({ children }: LayoutProps) => {
           </a>
 
           {/* 햄버거 메뉴 아이콘 */}
-          <button 
-            className="mobile-menu-toggle" 
+          <button
+            className="mobile-menu-toggle"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
+            <span className={`hamburger ${isMenuOpen ? "active" : ""}`}></span>
           </button>
 
           {/* 네비게이션 */}
-          <nav className={`site-nav ${isMenuOpen ? 'open' : ''}`}>
+          <nav className={`site-nav ${isMenuOpen ? "open" : ""}`}>
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/projects">Projects</a>
